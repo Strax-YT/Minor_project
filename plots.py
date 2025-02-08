@@ -1,3 +1,4 @@
+#given all the data regarding plotings
 optimal_threshold = 0.600
 accuracy = 0.901
 roc_auc = 0.625
@@ -11,7 +12,7 @@ classification_report = {
 }
 
 confusion_matrix = np.array([[8, 19], [14, 291]])
-
+#Features required in the dataset
 feature_importances = pd.DataFrame({
     'feature': [
         'SerumElectrolytesSodium', 'BUN_Protein_Interaction', 'GFR', 'GFR_Creatinine_Ratio',
@@ -22,7 +23,7 @@ feature_importances = pd.DataFrame({
     'importance': [3027, 2907, 2753, 2667, 2591, 2578, 2514, 2488, 2310, 1786, 1600, 1427, 1129]
 })
 
-# Plotting
+# Plotting the data
 plt.figure(figsize=(15, 10))
 
 # 1. Optimal Threshold, Accuracy, and ROC-AUC
