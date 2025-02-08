@@ -1,3 +1,4 @@
+#Import necessary libraries
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -11,6 +12,8 @@ from preprocess import preprocess_data
 from utils import save_model
 import warnings
 warnings.filterwarnings('ignore')
+
+# training model
 
 def train_model(X, y):
     X_train, X_test, y_train, y_test = train_test_split(
@@ -42,7 +45,7 @@ def train_model(X, y):
     
     for name, model in models.items():
         model.fit(X_train_balanced, y_train_balanced)
-    
+#save the files & dataset    
     save_model(models, scaler)
     return models, scaler
 
