@@ -50,4 +50,4 @@ def preprocess_data(data):
     X['Protein_GFR_Ratio'] = X['ProteinInUrine'] / (X['GFR'] + 1e-6)
     X['Electrolyte_Hemoglobin_Ratio'] = X['SerumElectrolytesSodium'] / (X['HemoglobinLevels'] + 1e-6)
     
-    return (X, y) if include_labelss else X
+    return (X, y) if include_labels else X
