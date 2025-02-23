@@ -1,4 +1,9 @@
 #given all the data regarding plotings
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 optimal_threshold = 0.600
 accuracy = 0.901
 roc_auc = 0.625

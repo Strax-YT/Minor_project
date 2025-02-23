@@ -1,3 +1,5 @@
+# imported libraries
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split, StratifiedKFold
@@ -212,9 +214,10 @@ class FinalCKDModel:
 
 def main():
     model = FinalCKDModel()
-    X, y = model.preprocess_data("/content/Chronic_Kidney_Dsease_data.csv")
+    X, y = model.preprocess_data("data/Chronic_Kidney_Dsease_data.csv")
     best_params = model.optimize_hyperparameters(X, y)
     model.train_ensemble(X, y, best_params)
 
 if __name__ == "__main__":
     main()
+    
